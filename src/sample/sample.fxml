@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.collections.FXCollections?>
+
+<Pane id="pane1" fx:id="" maxHeight="382.0" maxWidth="606.0" prefHeight="257.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ComboBox fx:id="comBox1" editable="false" layoutX="88.0" layoutY="102.0" onAction="#updateTextField" prefWidth="150.0" promptText="Select" value="Celsius">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Celsius" />
+               <String fx:value="Fahrenheit" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="textField1" layoutX="88.0" layoutY="57.0" prefHeight="45.0" prefWidth="150.0" />
+      <TextField fx:id="textField2" layoutX="294.0" layoutY="57.0" onAction="#updateTextField" prefHeight="45.0" prefWidth="150.0" />
+      <ComboBox fx:id="comBox2" editable="false" layoutX="294.0" layoutY="102.0" onAction="#updateTextField" prefHeight="25.0" prefWidth="150.0" value="Fahrenheit">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Fahrenheit" />
+               <String fx:value="Celsius" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Button layoutX="88.0" layoutY="157.0" mnemonicParsing="false" style="-fx-background-color: orange;" text="Formula" textFill="WHITE" />
+      <Text fx:id="text1" layoutX="257.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Text fx:id="text2" layoutX="157.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(0° C x 9/5) + 32 = 0° F ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
